@@ -17,11 +17,11 @@ func _ready():
 	button6.pressed.connect(_on_button6_pressed)
 	
 func _on_button1_pressed():
-	get_tree().change_scene_to_file("res://Ball and Wall.tscn")  # Change to main.scene
+	get_tree().change_scene_to_file("res://Maze/Ball and Wall.tscn")  # Change to main.scene
 func _on_button2_pressed():
-	get_tree().change_scene_to_file("res://Sprite2D.tscn")
+	get_tree().change_scene_to_file("res://Platformer/moving_icon.tscn")
 func _on_button3_pressed():
-	get_tree().change_scene_to_file("res://game_selection.tscn")
+	get_tree().change_scene_to_file("res://Dodge/main.tscn")
 func _on_button4_pressed():
 	get_tree().change_scene_to_file("res://game_selection.tscn")
 func _on_button5_pressed():

@@ -1,0 +1,251 @@
+[gd_scene load_steps=13 format=3 uid="uid://bc04jgq832nvc"]
+
+[ext_resource type="Script" path="res://Maze/ball_and_wall.gd" id="1_1jaua"]
+[ext_resource type="PackedScene" uid="uid://be6gc1kd6ovdl" path="res://Maze/Ball.tscn" id="2_wyejb"]
+[ext_resource type="Texture2D" uid="uid://dkq1swbmmxmbq" path="res://assets/art/Bouncy Platform Long.png" id="3_hyyq7"]
+
+[sub_resource type="PhysicsMaterial" id="6"]
+bounce = 0.5
+
+[sub_resource type="CapsuleShape2D" id="2"]
+radius = 28.7617
+height = 309.37
+
+[sub_resource type="PhysicsMaterial" id="1"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="8"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="5"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="7"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="9"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="3"]
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="4"]
+bounce = 0.5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_1jaua")
+Ball = ExtResource("2_wyejb")
+metadata/_edit_vertical_guides_ = [480.0]
+
+[node name="WallContainer" type="Node" parent="."]
+
+[node name="Wall1" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(145, 586)
+rotation = 0.261799
+physics_material_override = SubResource("6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall1"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall1"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall2" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(508, 379)
+rotation = -1.57079
+physics_material_override = SubResource("1")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall2"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall2"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall3" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(336, 750)
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall3"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall3"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall10" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(96, 750)
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall10"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall10"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall11" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(-28, 625)
+rotation = 1.57079
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall11"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall11"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall12" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(-28, 360)
+rotation = 1.57079
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall12"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall12"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall13" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(-28, 88)
+rotation = 1.57079
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall13"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall13"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall14" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(124, -31)
+rotation = 3.14159
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall14"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall14"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall15" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(380, -31)
+rotation = 3.14159
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall15"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall15"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall4" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(508, 106)
+rotation = -1.5708
+physics_material_override = SubResource("5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall4"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall4"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall9" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(508, 611)
+rotation = -1.5708
+physics_material_override = SubResource("5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall9"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall9"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall5" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(32, 233)
+rotation = 1.5708
+physics_material_override = SubResource("7")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall5"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall5"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall6" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(220, 109)
+physics_material_override = SubResource("9")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall6"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall6"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall7" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(236, 347)
+rotation = -1.0472
+scale = Vector2(0.8, 0.8)
+physics_material_override = SubResource("3")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall7"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall7"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall8" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(332, 361)
+rotation = 1.309
+scale = Vector2(0.8, 0.8)
+physics_material_override = SubResource("4")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall8"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall8"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Ball2" parent="." instance=ExtResource("2_wyejb")]
+position = Vector2(300, 41)
+gravity_scale = 10.0
+script = null
+
+[node name="Ball5" parent="." instance=ExtResource("2_wyejb")]
+position = Vector2(196, 268)
+script = null
+
+[node name="Ball9" parent="." instance=ExtResource("2_wyejb")]
+position = Vector2(69, 40)
+script = null
+
+[node name="Ball12" parent="." instance=ExtResource("2_wyejb")]
+position = Vector2(376, 183)
+script = null

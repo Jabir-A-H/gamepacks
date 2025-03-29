@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://fl2w1x054sdg"]
+
+[ext_resource type="Texture2D" uid="uid://obx7b7wbehl2" path="res://assets/art/enemyFlyingAlt_1.png" id="2_kgy2c"]
+[ext_resource type="Texture2D" uid="uid://dvf1rscgscxyl" path="res://assets/art/enemyFlyingAlt_2.png" id="3_3x2hc"]
+[ext_resource type="Texture2D" uid="uid://bptqtb5gsfv0f" path="res://assets/art/enemySwimming_1.png" id="4_o5i8b"]
+[ext_resource type="Texture2D" uid="uid://ds3qu5ha686u2" path="res://assets/art/enemySwimming_2.png" id="5_06fi1"]
+[ext_resource type="Texture2D" uid="uid://bhno5km2ppu1g" path="res://assets/art/enemyWalking_1.png" id="6_vfeac"]
+[ext_resource type="Texture2D" uid="uid://w1snuxm70yjc" path="res://assets/art/enemyWalking_2.png" id="7_8wsbg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a0bt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kgy2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3x2hc")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_o5i8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_06fi1")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vfeac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8wsbg")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sf17"]
+radius = 36.0
+height = 100.0
+
+[node name="Mob" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_4a0bt")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7sf17")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkq1swbmmxmbq"
-path="res://.godot/imported/Bouncy Platform Long.png-9b2628c180785c5ec622adb5c4ee7b17.ctex"
+uid="uid://bymw2lxp63pgt"
+path="res://.godot/imported/playerGrey_up1.png-510d7162ef952bb07c1afd1639303c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bouncy Platform Long.png"
-dest_files=["res://.godot/imported/Bouncy Platform Long.png-9b2628c180785c5ec622adb5c4ee7b17.ctex"]
+source_file="res://assets/art/playerGrey_up1.png"
+dest_files=["res://.godot/imported/playerGrey_up1.png-510d7162ef952bb07c1afd1639303c70.ctex"]
 
 [params]
 

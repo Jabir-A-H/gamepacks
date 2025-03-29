@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c2vdtrenmn1ia"]
 
-[ext_resource type="Script" uid="uid://ctvl3guq03hr8" path="res://start.gd" id="1_r305v"]
+[ext_resource type="Script" uid="uid://ctvl3guq03hr8" path="res://Start/start.gd" id="1_r305v"]
 
 [node name="Start" type="Label"]
 anchors_preset = 8

@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dm5jrnxmxnuof"]
+[gd_scene load_steps=4 format=3 uid="uid://be6gc1kd6ovdl"]
 
-[ext_resource type="Texture2D" uid="uid://dv6rx85s1gy3i" path="res://assets/ballBlue_10.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dv6rx85s1gy3i" path="res://assets/art/ballBlue_10.png" id="1"]
 
 [sub_resource type="PhysicsMaterial" id="1"]
 bounce = 0.5
@@ -12,6 +12,7 @@ radius = 37.1452
 [node name="Ball" type="RigidBody2D"]
 physics_material_override = SubResource("1")
 gravity_scale = 4.0
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

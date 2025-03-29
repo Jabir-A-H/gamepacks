@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0k3o7e0j46qc"]
 
-[ext_resource type="Script" uid="uid://c8pwa1v0gmxif" path="res://game_selection.gd" id="1_bvbfy"]
+[ext_resource type="Script" uid="uid://c8pwa1v0gmxif" path="res://Selection/game_selection.gd" id="1_bvbfy"]
 
 [node name="Game Selection" type="Label"]
 anchors_preset = 8
@@ -29,19 +29,19 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Ball and Wall"
+text = "Maze"
 
 [node name="Button2" type="Button" parent="GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Icon Moving "
+text = "Platformer"
 
 [node name="Button3" type="Button" parent="GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "game 3"
+text = "Dodge"
 
 [node name="Button4" type="Button" parent="GridContainer"]
 layout_mode = 2

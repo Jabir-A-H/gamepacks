@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cscojjfrihihc"]
+
+[ext_resource type="PackedScene" uid="uid://criifdiq8px4d" path="res://Platformer/character.tscn" id="1_5slou"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_5slou")]
+position = Vector2(227, 271)
+
+[node name="Timer" type="Timer" parent="Sprite2D"]
+wait_time = 2.0
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 166.0
+offset_top = 397.0
+offset_right = 294.0
+offset_bottom = 446.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Do Something"
+
+[connection signal="pressed" from="Button" to="Sprite2D/Timer" method="_on_button_pressed"]
