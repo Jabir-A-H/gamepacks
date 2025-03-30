@@ -15,7 +15,8 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-text = "Yet Another Tutorial"
+text = "GamePacks"
+horizontal_alignment = 1
 script = ExtResource("1_r305v")
 
 [node name="Button" type="Button" parent="."]
@@ -25,3 +26,11 @@ offset_top = 58.0
 offset_right = 123.0
 offset_bottom = 106.0
 text = "Start"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 58.5
+offset_top = 152.5
+offset_right = 652.5
+offset_bottom = 175.5
+text = "need to add more stuff like settings, help, quit. continue, start new and so on"

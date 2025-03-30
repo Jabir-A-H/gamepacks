@@ -19,12 +19,12 @@ func _ready():
 func _on_button1_pressed():
 	get_tree().change_scene_to_file("res://Maze/Ball and Wall.tscn")  # Change to main.scene
 func _on_button2_pressed():
-	get_tree().change_scene_to_file("res://Platformer/moving_icon.tscn")
+	get_tree().change_scene_to_file("res://Platformer/platformer.tscn")
 func _on_button3_pressed():
 	get_tree().change_scene_to_file("res://Dodge/main.tscn")
 func _on_button4_pressed():
-	get_tree().change_scene_to_file("res://game_selection.tscn")
+	get_tree().change_scene_to_file("res://Selection/game_selection.tscn")
 func _on_button5_pressed():
-	get_tree().change_scene_to_file("res://game_selection.tscn")
+	get_tree().change_scene_to_file("res://Selection/game_selection.tscn")
 func _on_button6_pressed():
-	get_tree().change_scene_to_file("res://game_selection.tscn")
+	get_tree().change_scene_to_file("res://Selection/game_selection.tscn")

@@ -35,7 +35,6 @@ bounce = 0.5
 [node name="Main" type="Node"]
 script = ExtResource("1_1jaua")
 Ball = ExtResource("2_wyejb")
-metadata/_edit_vertical_guides_ = [480.0]
 
 [node name="WallContainer" type="Node" parent="."]
 
@@ -53,7 +52,7 @@ rotation = 1.5708
 shape = SubResource("2")
 
 [node name="Wall2" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(508, 379)
+position = Vector2(1180, 379)
 rotation = -1.57079
 physics_material_override = SubResource("1")
 metadata/_edit_group_ = true
@@ -66,7 +65,7 @@ rotation = 1.5708
 shape = SubResource("2")
 
 [node name="Wall3" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(336, 750)
+position = Vector2(336, 677)
 physics_material_override = SubResource("8")
 metadata/_edit_group_ = true
 
@@ -77,8 +76,44 @@ texture = ExtResource("3_hyyq7")
 rotation = 1.5708
 shape = SubResource("2")
 
+[node name="Wall16" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(600, 677)
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall16"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall16"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall17" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(864, 677)
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall17"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall17"]
+rotation = 1.5708
+shape = SubResource("2")
+
+[node name="Wall18" type="StaticBody2D" parent="WallContainer"]
+position = Vector2(1032, 677)
+physics_material_override = SubResource("8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall18"]
+texture = ExtResource("3_hyyq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall18"]
+rotation = 1.5708
+shape = SubResource("2")
+
 [node name="Wall10" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(96, 750)
+position = Vector2(96, 677)
 physics_material_override = SubResource("8")
 metadata/_edit_group_ = true
 
@@ -128,34 +163,8 @@ texture = ExtResource("3_hyyq7")
 rotation = 1.5708
 shape = SubResource("2")
 
-[node name="Wall14" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(124, -31)
-rotation = 3.14159
-physics_material_override = SubResource("8")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall14"]
-texture = ExtResource("3_hyyq7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall14"]
-rotation = 1.5708
-shape = SubResource("2")
-
-[node name="Wall15" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(380, -31)
-rotation = 3.14159
-physics_material_override = SubResource("8")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="WallContainer/Wall15"]
-texture = ExtResource("3_hyyq7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallContainer/Wall15"]
-rotation = 1.5708
-shape = SubResource("2")
-
 [node name="Wall4" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(508, 106)
+position = Vector2(1180, 106)
 rotation = -1.5708
 physics_material_override = SubResource("5")
 metadata/_edit_group_ = true
@@ -168,7 +177,7 @@ rotation = 1.5708
 shape = SubResource("2")
 
 [node name="Wall9" type="StaticBody2D" parent="WallContainer"]
-position = Vector2(508, 611)
+position = Vector2(1180, 611)
 rotation = -1.5708
 physics_material_override = SubResource("5")
 metadata/_edit_group_ = true
@@ -236,16 +245,12 @@ shape = SubResource("2")
 [node name="Ball2" parent="." instance=ExtResource("2_wyejb")]
 position = Vector2(300, 41)
 gravity_scale = 10.0
-script = null
 
 [node name="Ball5" parent="." instance=ExtResource("2_wyejb")]
 position = Vector2(196, 268)
-script = null
 
 [node name="Ball9" parent="." instance=ExtResource("2_wyejb")]
 position = Vector2(69, 40)
-script = null
 
 [node name="Ball12" parent="." instance=ExtResource("2_wyejb")]
 position = Vector2(376, 183)
-script = null
