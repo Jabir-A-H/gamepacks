@@ -1,6 +1,8 @@
 # GamePacks
- Gonna make a game out of this tutorial project. Learning and using Godot.
+Gonna make a game out of this tutorial project. Learning and using Godot.
 
+
+gameplan?
 
 | Games                          |     |
 | ------------------------------ | --- |
@@ -20,6 +22,8 @@
 - or...
 - is it? 
 
+
+gpt conversation highlights below
 
 1. Difficulty Scaling:
 
