@@ -4,16 +4,19 @@ Gonna make a game out of this tutorial project. Learning and using Godot.
 
 gameplan?
 
-| Games                          |     |
-| ------------------------------ | --- |
-| Maze                           |     |
-| Dodge                          |     |
-| Platformer fire boy water girl |     |
-| Cut the rope                   |     |
-| Mouse drag test of patience    |     |
-| Snake                          |     |
-| 2d shadow fight                |     |
-| **Chain Reaction**             |     |
+| Games                           |     |
+| ------------------------------- | --- |
+| Maze                            |     |
+| Dodge                           |     |
+| Platformer fire boy water girl  |     |
+| Cut the rope                    |     |
+| Mouse drag test of patience     |     |
+| Snake                           |     |
+| 2d shadow fight                 |     |
+| **Chain Reaction**              |     |
+| tower troops sending conquering |     |
+| kingdoms and lords              |     |
+|          |     |
 
 - a character walks in dungeon to play these various mini games.
 - pallet town like starting city
