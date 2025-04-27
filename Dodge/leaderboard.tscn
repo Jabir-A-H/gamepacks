@@ -1,21 +1,52 @@
-[gd_scene format=3 uid="uid://byvk2gqptmkir"]
+[gd_scene load_steps=2 format=3 uid="uid://byvk2gqptmkir"]
+
+[ext_resource type="Script" uid="uid://g8eady5njjvw" path="res://Dodge/leaderboard.gd" id="1_owpmj"]
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_owpmj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.298039, 0.298039, 0.298039, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -459.0
+offset_top = -204.0
+offset_right = 459.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "Leaderboard"
+horizontal_alignment = 1
+uppercase = true
 
 [node name="ScoreList" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

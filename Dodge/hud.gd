@@ -2,7 +2,9 @@ extends CanvasLayer
 
 # Notifies `Main` node that the button has been pressed
 signal start_game
-
+signal show_settings
+signal show_help
+signal show_leaderboard
 
 func show_message(text):
 	$Message.text = text
@@ -29,3 +31,13 @@ func _on_start_button_pressed():
 
 func _on_message_timer_timeout():
 	$Message.hide()
+
+
+func _on_settings_button_pressed() -> void:
+	show_settings.emit()  
+
+func _on_help_button_pressed() -> void:
+	show_help.emit()
+
+func _on_leaderboard_button_pressed() -> void:
+	show_leaderboard.emit()

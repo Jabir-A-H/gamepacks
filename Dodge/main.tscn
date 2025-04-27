@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://b0c7nheteagbu"]
+[gd_scene load_steps=12 format=4 uid="uid://b0c7nheteagbu"]
 
 [ext_resource type="Script" uid="uid://bi1j4w2qq5jky" path="res://Dodge/main.gd" id="1_jxien"]
 [ext_resource type="PackedScene" uid="uid://fl2w1x054sdg" path="res://Dodge/mob.tscn" id="2_34tqw"]
 [ext_resource type="PackedScene" uid="uid://btthxcme0i6wt" path="res://Dodge/player.tscn" id="3_eqxbr"]
 [ext_resource type="PackedScene" uid="uid://bbq2375o31wno" path="res://Dodge/hud.tscn" id="4_34tqw"]
 [ext_resource type="AudioStream" uid="uid://d33v47dpde203" path="res://assets/music/gameover.wav" id="5_eqxbr"]
+[ext_resource type="PackedScene" uid="uid://byvk2gqptmkir" path="res://Dodge/leaderboard.tscn" id="6_qtair"]
 
 [sub_resource type="Curve2D" id="Curve2D_qtair"]
 _data = {
@@ -70,8 +71,24 @@ stream = SubResource("AudioStreamOggVorbis_qtair")
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_eqxbr")
 
+[node name="NameInputDialog" type="AcceptDialog" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="NameInputDialog"]
+offset_right = 68.5625
+offset_bottom = 31.0
+placeholder_text = "Enter your name:"
+max_length = 256
+expand_to_text_length = true
+
+[node name="Leaderboard" parent="." instance=ExtResource("6_qtair")]
+visible = false
+
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="show_help" from="HUD" to="." method="_on_hud_show_help"]
+[connection signal="show_leaderboard" from="HUD" to="." method="_on_hud_show_leaderboard"]
+[connection signal="show_settings" from="HUD" to="." method="_on_hud_show_settings"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
+[connection signal="confirmed" from="NameInputDialog" to="." method="_on_name_input_dialog_confirmed"]

@@ -10,6 +10,13 @@ func game_over():
 	$HUD.show_game_over()
 	$Music.stop()
 	$DeathSound.play()
+	# Check if the score qualifies for the leaderboard
+	var leaderboard = $Leaderboard  # Adjust the path if needed
+	if leaderboard.is_top_score(score):
+		$NameInputDialog.popup_centered()
+	else:
+		# Show retry menu or other game-over logic
+		$HUD.show_message("Game Over")
 
 func new_game():
 	score = 0
@@ -52,3 +59,26 @@ func _on_score_timer_timeout():
 func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
+
+
+func _on_name_input_dialog_confirmed() -> void:
+	var player_name = $NameInputDialog/LineEdit.text.strip_edges()
+	if player_name == "":
+		player_name = "Anonymous"  # Default name if none is provided
+
+	# Add the score to the leaderboard
+	var leaderboard = $Leaderboard  # Adjust the path if needed
+	leaderboard.add_score(player_name, score)
+
+	# Show retry menu or other game-over logic
+	$HUD.show_message("Game Over")
+
+
+func _on_hud_show_settings() -> void:
+	pass # Replace with function body.
+
+func _on_hud_show_leaderboard() -> void:
+	$Leaderboard.visible = true
+
+func _on_hud_show_help() -> void:
+	pass # Replace with function body.
