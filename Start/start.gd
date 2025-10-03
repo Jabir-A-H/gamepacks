@@ -7,3 +7,8 @@ func _ready():
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Selection/game_selection.tscn")  # Change to main.scene
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
